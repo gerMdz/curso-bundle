@@ -46,3 +46,10 @@ And as always, thanks so much for your support and letting
 us do what we love!
 
 <3 Your friends at KnpUniversity
+
+### Cap 1
+* Agregando librería y configurando servicios
+
+### Next
+[Cap 2 ](https://symfonycasts.com/screencast/symfony-bundle/bundle-services#play)
+

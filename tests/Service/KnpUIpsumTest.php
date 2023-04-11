@@ -2,7 +2,7 @@
 
 namespace App\Tests\Service;
 
-use App\Service\KnpUIpsum;
+use KnpUIpsum;
 use PHPUnit\Framework\TestCase;
 
 class KnpUIpsumTest extends TestCase

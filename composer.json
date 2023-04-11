@@ -34,7 +34,10 @@
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true
+        }
     },
     "autoload": {
         "psr-4": {
@@ -43,6 +46,7 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "KnpU\\LoremIpsumBundle\\": "lib/LoremIpsumBundle/src",
             "App\\Tests\\": "tests/"
         }
     },
