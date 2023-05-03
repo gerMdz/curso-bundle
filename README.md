@@ -50,6 +50,9 @@ us do what we love!
 ### Cap 1
 * Agregando librería y configurando servicios
 
+### Cap 2
+* Servicios de adición automática
+
 ### Next
-[Cap 2 ](https://symfonycasts.com/screencast/symfony-bundle/bundle-services#play)
+[Cap 3 ](https://symfonycasts.com/screencast/symfony-bundle/autowiring-public-private#play)
 
