@@ -8,7 +8,11 @@
         <!-- ... -->
 
         <!-- Explicitly configure the service -->
-        <service id="KnpU\LoremIpsumBundle\KnpUIpsum" />
+        <service id="knpu_lorem_ipsum.knpi_ipsum"  class="KnpU\LoremIpsumBundle\KnpUIpsum" public="true"/>
+
+        <service id="KnpU\LoremIpsumBundle\KnpUIpsum" alias="knpu_lorem_ipsum.knpi_ipsum" public="false" />
+
+
 
     </services>
 </container>

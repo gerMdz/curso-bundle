@@ -54,5 +54,5 @@ us do what we love!
 * Servicios de adición automática
 
 ### Next
-[Cap 3 ](https://symfonycasts.com/screencast/symfony-bundle/autowiring-public-private#play)
+[Cap 4](https://symfonycasts.com/screencast/symfony-bundle/config-extension#play)
 
