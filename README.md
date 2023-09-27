@@ -54,5 +54,5 @@ us do what we love!
 * Servicios de adición automática
 
 ### Next
-[Cap 5](https://symfonycasts.com/screencast/symfony-bundle/custom-extension-alias#play)
+[Cap 7](https://symfonycasts.com/screencast/symfony-bundle/override-service#play)
 
