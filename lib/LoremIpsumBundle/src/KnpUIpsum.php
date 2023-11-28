@@ -12,11 +12,25 @@ class KnpUIpsum
     private $unicornsAreReal;
 
     private $minSunshine;
+    /**
+     * @var KnpUWordProvider
+     */
+    private $wordProvider;
 
-    public function __construct(bool $unicornsAreReal = true, $minSunshine = 3)
+    /**
+     * @param KnpUWordProvider $wordProvider
+     * @param bool|null $unicornsAreReal
+     * @param int $minSunshine
+     */
+    public function __construct(
+        KnpUWordProvider $wordProvider,
+        bool             $unicornsAreReal = null,
+        int              $minSunshine = 3)
     {
+        $unicornsAreReal = $unicornsAreReal ?? true;
         $this->unicornsAreReal = $unicornsAreReal;
         $this->minSunshine = $minSunshine;
+        $this->wordProvider = $wordProvider;
     }
 
     /**
@@ -43,7 +57,7 @@ class KnpUIpsum
         for ($i = 0; $i < $count; $i++) {
             $wordCount = $this->gauss(16, 5.08);
             // avoid very short sentences
-            $wordCount  = $wordCount < 4 ? 4 : $wordCount;
+            $wordCount = $wordCount < 4 ? 4 : $wordCount;
             $sentences[] = $this->getWords($wordCount, true);
         }
 
@@ -58,8 +72,8 @@ class KnpUIpsum
      * Generates words of lorem ipsum.
      *
      * @access public
-     * @param  integer $count how many words to generate
-     * @param  boolean $asArray whether an array or a string should be returned
+     * @param integer $count how many words to generate
+     * @param boolean $asArray whether an array or a string should be returned
      * @return mixed   string or array of generated lorem ipsum words
      */
     public function getWords(int $count = 1, bool $asArray = false)
@@ -105,8 +119,8 @@ class KnpUIpsum
      * number of words in a sentence, the number of sentences in a paragraph
      * and the distribution of commas in a sentence.
      *
-     * @param  float $mean average value
-     * @param  float $std_dev standard deviation
+     * @param float $mean average value
+     * @param float $std_dev standard deviation
      * @return float  calculated distribution
      */
     private function gauss(float $mean, float $std_dev): float
@@ -202,138 +216,6 @@ class KnpUIpsum
 
     private function getWordList(): array
     {
-        return [
-            'adorable',
-            'active',
-            'admire',
-            'adventurous',
-            'agreeable',
-            'amazing',
-            'angelic',
-            'awesome',
-            'beaming',
-            'beautiful',
-            'believe',
-            'bliss',
-            'brave',
-            'brilliant',
-            'bubbly',
-            'bingo',
-            'champion',
-            'charming',
-            'cheery',
-            'congratulations',
-            'cool',
-            'courageous',
-            'creative',
-            'cute',
-            'dazzling',
-            'delightful',
-            'divine',
-            'ecstatic',
-            'effervescent',
-            'electrifying',
-            'enchanting',
-            'energetic',
-            'engaging',
-            'excellent',
-            'exciting',
-            'exquisite',
-            'fabulous',
-            'fantastic',
-            'flourishing',
-            'fortunate',
-            'free',
-            'fresh',
-            'friendly',
-            'funny',
-            'generous',
-            'genius',
-            'genuine',
-            'giving',
-            'glamorous',
-            'glowing',
-            'good',
-            'gorgeous',
-            'graceful',
-            'great',
-            'grin',
-            'handsome',
-            'happy',
-            'harmonious',
-            'healing',
-            'healthy',
-            'hearty',
-            'heavenly',
-            'honest',
-            'honorable',
-            'hug',
-            'imaginative',
-            'impressive',
-            'independent',
-            'innovative',
-            'inventive',
-            'jovial',
-            'joy',
-            'jubilant',
-            'kind',
-            'laugh',
-            'legendary',
-            'light',
-            'lively',
-            'lovely',
-            'lucky',
-            'luminous',
-            'marvelous',
-            'meaningful',
-            'miraculous',
-            'motivating',
-            'natural',
-            'nice',
-            'nurturing',
-            'open',
-            'optimistic',
-            'paradise',
-            'perfect',
-            'phenomenal',
-            'plentiful',
-            'pleasant',
-            'poised',
-            'polished',
-            'popular',
-            'positive',
-            'pretty',
-            'principled',
-            'proud',
-            'quality',
-            'quintessential',
-            'quick',
-
-            'sunshine',
-            'rainbows',
-            'unicorns',
-            'puns',
-            'butterflies',
-            'cupcakes',
-            'sprinkles',
-            'glitter',
-            'friend',
-            'high-five',
-            'friendship',
-            'compliments',
-            'sunsets',
-            'cookies',
-            'flowers',
-            'bikes',
-            'kittens',
-            'puppies',
-            'macaroni',
-            'freckles',
-            'baguettes',
-            'presents',
-            'fireworks',
-            'chocholate',
-            'marshmallow',
-        ];
+        return $this->wordProvider->getListaPalabras();
     }
 }

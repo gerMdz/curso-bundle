@@ -54,5 +54,5 @@ us do what we love!
 * Servicios de adición automática
 
 ### Next
-[Cap 7](https://symfonycasts.com/screencast/symfony-bundle/override-service#play)
+[Cap 8](https://symfonycasts.com/screencast/symfony-bundle/interface-alias#play)
 

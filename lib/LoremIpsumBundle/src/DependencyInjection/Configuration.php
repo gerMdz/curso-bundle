@@ -18,6 +18,7 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->booleanNode('unicorns_are_real')->defaultTrue()->info('Creas o no en unicornios')->end()
                 ->integerNode('min_sunshine')->defaultTrue()->info('Te gusta el verano?')->end()
+                ->scalarNode('word_provider')->defaultNull()->end()
             ->end()
             ;
 
