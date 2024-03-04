@@ -2,7 +2,7 @@
 
 namespace App\Service;
 
-use KnpU\LoremIpsumBundle\KnpUWordProvider;
+use GerMdz\LoremIpsumBundle\KnpUWordProvider;
 
 class CustomWordProvider extends KnpUWordProvider
 {
@@ -11,7 +11,7 @@ class CustomWordProvider extends KnpUWordProvider
      */
     public function getListaPalabras(): array
     {
-        $words = parent::getListaPalabras();
+        $words = parent::getWordList();
 
         $words[] = 'montaña';
 

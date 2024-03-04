@@ -54,5 +54,5 @@ us do what we love!
 * Servicios de adición automática
 
 ### Next
-[Cap 8](https://symfonycasts.com/screencast/symfony-bundle/interface-alias#play)
+[Cap 10](https://symfonycasts.com/screencast/symfony-bundle/testing#play)
 

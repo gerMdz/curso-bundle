@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Service\MarkdownHelper;
 use App\Service\SlackClient;
-use KnpU\LoremIpsumBundle\KnpUIpsum;
+use GerMdz\LoremIpsumBundle\KnpUIpsum;
 use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
