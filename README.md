@@ -54,5 +54,5 @@ us do what we love!
 * Servicios de adición automática
 
 ### Next
-[Cap 10](https://symfonycasts.com/screencast/symfony-bundle/testing#play)
+[Cap 11](https://symfonycasts.com/screencast/symfony-bundle/integration-test#play)
 
