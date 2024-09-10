@@ -16,3 +16,5 @@
 .idea
 /.idea
 /.php-version
+/.phpunit.result.cache
+/phpunit.xml.dist.bak
